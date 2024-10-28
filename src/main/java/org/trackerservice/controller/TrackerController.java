@@ -18,7 +18,8 @@ public class TrackerController {
 
     @PostMapping("/tracker/coords")
     public ResponseEntity<String> receiveCoordinates(@RequestBody TaxiCoordinate coordinate) {
+        System.out.println("запрос post пришел");
         kafkaProducerService.sendCoordinates(coordinate);
-        return ResponseEntity.ok("Coordinates sent to Kafka");
+        return ResponseEntity.ok("Coordinates sent to Kafka" + coordinate);
     }
 }
