@@ -31,3 +31,7 @@ test {
 //bootJar {
 //    mainClassName = 'org.trackerservice.TrackerServiceApplication'
 //}
+
+jar {
+    enabled = false
+}
